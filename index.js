@@ -134,8 +134,6 @@ function getLastReview(arr) {
   return `\n${arr[length].name} gave the restaurant a ${arr[length].rating}, and their feedback was:\n"${arr[length].feedback}"`;
 }
 
-console.log(getLastReview(reviews));
-
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
 /** STRETCH 1: Write a function called `getReviewByRating` that returns an array containing all reviews in a certain range. Your function should accept: 
@@ -150,8 +148,8 @@ console.log(getLastReview(reviews));
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
-function getReviewByRating(/* code here */) {
-  /* code here */
+function getReviewByRating(arr, rating) {
+  return arr.filter((rate) => Math.floor(rate.rating) === Math.floor(rating));
 }
 
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
